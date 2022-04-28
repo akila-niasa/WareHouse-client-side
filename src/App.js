@@ -6,15 +6,17 @@ import Home from './components/Home/Home';
 import Invertories from './components/Inventories/Invertories';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Blogs from './components/Blogs/Blogs';
+import Login from './components/Login/Login';
 
 function App() {
   return (
     <div className="App">
       <Header/>
     <Routes>
-      <Route path='/home' element={<Home/>}/>
-      <Route path='/invertories' element={<Invertories/>}/>
-      <Route path='/home' element={<Home/>}/>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/blogs' element={<Blogs/>}/>
+      <Route path='/login' element={<Login/>}/>
     </Routes>
     <Footer/>
     </div>
