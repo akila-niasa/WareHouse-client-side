@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 import Blogs from './components/Blogs/Blogs';
 import Login from './components/Login/Login';
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import Register from './components/Register/Register';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       </RequireAuth>}/>
       <Route path='/blogs' element={<Blogs/>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/register' element={<Register/>}/>
     </Routes>
     <Footer/>
     </div>
