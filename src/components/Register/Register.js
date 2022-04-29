@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import toast, { Toaster } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import './Register.css'
 
 const Register = () => {
@@ -35,7 +37,7 @@ const Register = () => {
         event.preventDefault()
         if (password !== confirmPassword) {
 
-            alert("your password don't match")
+          toast.error("your password don't match")
 
         }
         else {
@@ -69,16 +71,18 @@ const Register = () => {
                     <Form.Label>Confirm Password</Form.Label>
                     <Form.Control onBlur={handleConfirmPassword} type="password" placeholder="Confirm Password" required />
                 </Form.Group>
-                {/* <p className='text-danger'>{error?.message}</p> */}
+               
                 <Button className='Button' variant="primary" type="submit">
                     Submit
                 </Button>
                 {errorElement}
+                <Toaster/>
 
             </Form>
 
 
             <p>Already have an account? <Link to="/login" className='text-primary mt-5 pe-auto text-decoration-none'>Please Login</Link> </p>
+            <SocialLogin/>
         </div>
     );
 };

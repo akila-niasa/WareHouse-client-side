@@ -6,6 +6,8 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import './Login.css'
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
+import toast, { Toaster } from 'react-hot-toast';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
     const [email, setEmail] = useState('')
@@ -48,17 +50,18 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
     }
 
+    if (user) {
+        navigate(from, { replace: true })
+    }
+
     const resetPassword = async () => {
         if (email) {
             await sendPasswordResetEmail(email);
-            alert('Sent email');
+            toast.error('Sent email');
         }
         else {
-            alert('Please enter your email');
+            toast.error('Please enter your email');
         }
-    }
-    if (user) {
-        navigate(from, { replace: true })
     }
 
     return (
@@ -76,17 +79,18 @@ const Login = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required />
                         </Form.Group>
-                        {errorElement}
 
+                        {errorElement}
+                        <Toaster/>
 
                         <Button className='button' variant="primary" type="submit">
                             Submit
                         </Button>
-
+                        <SocialLogin/>
                     </Form>
                     <p className=''>Forgot Password?<button onClick={resetPassword} className='btn btn-link text-primary text-decoration-none '>Reset Now</button></p>
 
-                    <p>New in My Site? <Link to="/register" className='text-primary pe-auto text-decoration-none' >Please Register</Link> </p>
+                    <p>New in Laptop Store? <Link to="/register" className='text-primary pe-auto text-decoration-none' >Please Register</Link> </p>
 
                 </div>
             </div>
