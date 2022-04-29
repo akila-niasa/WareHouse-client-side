@@ -7,9 +7,11 @@
     -moz-box-shadow: 10px 10px 64px 0px rgba(208, 208, 231, 0.75);
    }
    .button {
-    background-color: #7878bd;
+    background-color: #0d0d43;
     margin-top: 10px;
     font-size: 14px;
+    border-radius: 30px;
+    border-radius: 10px;
     padding: 7px 12px;
     font-weight: 500;
     color: white;

@@ -5,6 +5,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 
 import './Login.css'
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const Login = () => {
     const [email, setEmail] = useState('')
@@ -26,6 +27,14 @@ const Login = () => {
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
         auth
     );
+
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    }
+
+    if (loading || sending) {
+        return <Loading />
+    }
 
     const handleEmail = event => {
         setEmail(event.target.value);
@@ -67,7 +76,7 @@ const Login = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required />
                         </Form.Group>
-
+                        {errorElement}
 
 
                         <Button className='button' variant="primary" type="submit">

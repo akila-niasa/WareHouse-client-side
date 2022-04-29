@@ -33,10 +33,23 @@ const Register = () => {
 
     const handleSubmit = event => {
         event.preventDefault()
-        createUserWithEmailAndPassword(email, password)
+        if (password !== confirmPassword) {
+
+            alert("your password don't match")
+
+        }
+        else {
+            createUserWithEmailAndPassword(email, password)
+        }
     }
-    if(user){
+
+    if (user) {
         navigate(from, { replace: true })
+    }
+
+    if (error) {
+        console.log(error);
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
     return (
         <div className='container Card w-50 mx-auto p-5 mt-5 mb-5'>
@@ -60,6 +73,7 @@ const Register = () => {
                 <Button className='Button' variant="primary" type="submit">
                     Submit
                 </Button>
+                {errorElement}
 
             </Form>
 
