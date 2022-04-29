@@ -1,7 +1,7 @@
 .banner{
-    background-image: url("https://i.ibb.co/Tk9ZrWF/download-banner-1.png");
+    background-image: url("https://i.ibb.co/4PRPZ1j/download-banner-1-1.png");
 }
-.btn {
+.banner-btn {
     position: relative;
     font-size: 17px;
     text-transform: uppercase;
@@ -17,17 +17,17 @@
     background-color: white;
    }
    
-   .btn:hover {
+   .banner-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
    }
    
-   .btn:active {
+   .banner-btn:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
    }
    
-   .btn::after {
+   .banner-btn::after {
     content: "";
     display: inline-block;
     height: 100%;
@@ -40,11 +40,11 @@
     transition: all .4s;
    }
    
-   .btn::after {
+   .banner-btn::after {
     background-color: #fff;
    }
    
-   .btn:hover::after {
+   .banner-btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
    }

@@ -8,7 +8,7 @@ const Banner = () => {
             <h1 className=' p-5 mx-5 mb-5 text-light'>Choose Your Laptop</h1>
             <div className='p-5'>
                 <Link to='/blogs'>
-                <button className=' btn'>
+                <button className='banner-btn'>
                     Blogs
                 </button>
                 </Link>
