@@ -10,6 +10,8 @@ import Blogs from './components/Blogs/Blogs';
 import Login from './components/Login/Login';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import Register from './components/Register/Register';
+import ManageInventory from './components/ManageInventory/ManageInventory';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -20,9 +22,11 @@ function App() {
       <Route path='/inventory/:id' element={<RequireAuth>
         <Invertories/>
       </RequireAuth>}/>
+      <Route path='/manageInventory' element={<ManageInventory/>}/>
       <Route path='/blogs' element={<Blogs/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
+      <Route path='*' element={<NotFound/>}/>
     </Routes>
    
     </div>
