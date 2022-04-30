@@ -22,6 +22,13 @@ const Header = () => {
                        
                         <Link to='/blogs' className='text-decoration-none text-light p-2 m-2'>Blogs</Link>
                         {
+                            user&& <>
+                            <Link to='/addItem' className='text-decoration-none text-light p-2 m-2'>Add Items</Link><Link className='text-decoration-none text-light p-2 m-2' to='/myItem'>My Items</Link>
+                            <Link to='/addItem' className='text-decoration-none text-light p-2 m-2'>Add Items</Link><Link className='text-decoration-none text-light p-2 m-2' to='/v'>Manage Item</Link>
+                            </>
+                        }
+                        
+                        {
          user?<button onClick={logout} className='header-btn text-decoration-none text-light p-2 m-2 '>Log Out</button>
          : <Link to='/login'className='text-decoration-none text-light p-2 m-2'>Login</Link>
        }

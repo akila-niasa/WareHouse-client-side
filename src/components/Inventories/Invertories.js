@@ -4,45 +4,52 @@ import { Link, useParams } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import './Inventories.css'
 
+
 const Invertories = () => {
     const { id } = useParams()
     const [product, setProduct] = useState({})
-    const [loading, setLoading] = useState(false);
+    // const [rerender, setRerender] = useState(false)
+    // const [loading, setLoading] = useState(false);
+    // const[quantity,setquantity]=useState(0)
+    const[rerender,setRerender]=useState(false)
     useEffect(() => {
+       
         fetch(`http://localhost:5000/product/${id}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setProduct(data)
             })
-    }, [id])
+    }, [id,rerender])
+    // console.log(product);
 
     const handledeliver=()=>{
-        const quantity=parseInt(product.quantity)-1
-        if (quantity) {
+        const updatedQuantity=parseInt(product.quantity)-1
+        if (updatedQuantity) {
             console.log('in if');
             fetch(`http://localhost:5000/product/${id}`, {
                 method: "PUT",
                 headers: { "content-type": "application/json" },
-                body: JSON.stringify({quantity})
+                body: JSON.stringify({updatedQuantity})
             })
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
                 })
                 
-               
+               setRerender(!rerender)
         }
     }
 
     const handleUpdate = event => {
         event.preventDefault()
-        const quantity = parseInt(event.target.quantity.value) + parseInt(product.quantity)
-        const quantityObj = { quantity }
-        console.log(quantity);
+   
+        const updatedQuantity = parseInt(event.target.quantity.value) + parseInt(product.quantity)
+        const quantityObj = { updatedQuantity }
+        // console.log(quantity);
         
-        if (quantity) {
-            setLoading(!loading);
+        if (updatedQuantity) {
+           
             console.log('in if');
             fetch(`http://localhost:5000/product/${id}`, {
                 method: "PUT",
@@ -52,14 +59,20 @@ const Invertories = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
+                   
+                   
                 })
+                setRerender(!rerender);
+                console.log('render is successfull');
                 event.target.reset()
                
         }
+        
     }
 
     return (
         <div>
+            <h2>The Product Id:{id}</h2>
             <div className='container card p-5 m-4' >
                 <div className='row'>
                     <div className='col-lg-6'><img src={product.image} alt="" /></div>
@@ -76,9 +89,9 @@ const Invertories = () => {
             <button onClick={handledeliver} className='button p-3 w-50'>deliverd</button>
 
             {/* update */}
-            <div onSubmit={handleUpdate} className="form-style m-5 ">
+            <div  className="form-style m-5 ">
                 <h1>update quantity</h1>
-                <form>
+                <form onSubmit={handleUpdate}>
                     <input type="text" name="quantity" placeholder="quantity" />
 
                     <input type="submit" value="update " />
