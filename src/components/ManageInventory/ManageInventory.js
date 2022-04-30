@@ -23,38 +23,15 @@ const ManageInventory = () => {
     .then(res=>res.json())
     .then(data=>{
       if(data.deletedCount>0){
-        const remain=products.filter(product=>product._id!==id)
-        setProducts(remain)
+        const remainProduct=products.filter(product=>product._id!==id)
+        setProducts(remainProduct)
       }
      
     })
   }
     }
 
-    // const handleSubmit = event => {
-    //     event.preventDefault()
-    //     const product = {
-    //         name: event.target.name.value,
-    //         supplier: event.target.name.value,
-    //         quantity: event.target.quantity.value,
-    //         image: event.target.image.value,
-    //         details: event.target.details.value,
-    //     };
-    //     if (product) {
-    //         fetch('http://localhost:5000/product', {
-    //             method: 'POST', // or 'PUT'
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify(product),
-    //         })
-    //             .then(response => response.json())
-    //             .then(data => {
-    //                 console.log('Success:', data);
-    //             })
-    //     }
-    //     window.location.reload();
-    // }
+  
     return (
         <div>
             <div className='container'>

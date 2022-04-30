@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import MySIngleItem from '../MySIngleItem/MySIngleItem';
 
 const MyItems = () => {
     const[user]=useAuthState(auth)
@@ -11,11 +12,9 @@ const MyItems = () => {
         .then(data=>setItems(data))
     },[user.email])
     return (
-        <div>
+        <div className='container'>
             {
-                items.map(item=><div key={item._id}>
-                    {item.name}
-                </div>)
+                items.map(item=><MySIngleItem  key={item._id} item={item}></MySIngleItem>)
             }
         </div>
     );
