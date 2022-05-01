@@ -1,36 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
+
 import './MySingleItem.css'
 
-const MySIngleItem = ({item}) => {
+const MySIngleItem = ({item,handleDelete}) => {
     const { name, supplier, quantity, image, details, _id } = item
-
-    
- 
-  
+   
     return (
         <div className='row'>
-                <div className='col-lg-4 col-md-6 g-2'>
-        <Card style={{ width: '18rem' }} className="card">
-            <Card.Img variant="top" src={image} />
-            <Card.Body>
-                <Card.Title>{name}</Card.Title>
-                <Card.Text>
-                    <span className='fw-bold'>Supplier</span>: {supplier}
-                </Card.Text>
-                <Card.Text>
-                   <span className='fw-bold'> Details</span>: {details}
-                </Card.Text>
-                <Card.Text>
-                   <span className='fw-bold'>
-                   Quantity</span>:  {quantity}
-                </Card.Text>
             
-                    <Button className='deletButton ms-1' >Delete</Button>
-              
-            </Card.Body>
-        </Card>
-    </div>
+    <div className='container Card p-3 m-4' >
+                <div className='row'>
+                    <div className='col-lg-6'><img src={image} alt="" /></div>
+                    <div className='col-lg-6 p-3'>
+                        <h3>Name: {name}</h3>
+                        <h5>Supplier:{supplier}</h5>
+                        <p>Details: {details}</p>
+                        <p>Quantity: {quantity}</p>
+                        <Button onClick={()=>handleDelete(_id)} className='deletButton ms-1' >Delete</Button>
+                    </div>
+                </div>
+            </div>
+
+  
         </div>
     );
 };

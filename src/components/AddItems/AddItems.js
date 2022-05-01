@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import useInventories from '../../hooks/useInventories';
+import Footer from '../Footer/Footer';
 import './AddItems.css'
 
 const AddItems = () => {
@@ -59,6 +60,7 @@ const AddItems = () => {
                         </label>
                     </form>
                 </div>
+                <Footer/>
         </div>
     );
 };

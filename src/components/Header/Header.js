@@ -22,7 +22,7 @@ const Header = () => {
                        
                         <Link to='/blogs' className='text-decoration-none text-light p-2 m-2'>Blogs</Link>
                         {
-                            user&& <>
+                            user && <>
                             <Link to='/addItem' className='text-decoration-none text-light p-2 m-2'>Add Items</Link><Link className='text-decoration-none text-light p-2 m-2' to='/myItem'>My Items</Link>
                             <Link to='/addItem' className='text-decoration-none text-light p-2 m-2'>Add Items</Link><Link className='text-decoration-none text-light p-2 m-2' to='/manageItem'>Manage Item</Link>
                             </>

@@ -15,7 +15,7 @@ const ManageInventory = () => {
     },[])
 
     const handleDelete=id=>{
-        const proccessed=window.confirm("are you sure about that")
+        const proccessed=window.confirm("are you sure about that?")
   if(proccessed){
     fetch(`http://localhost:5000/product/${id}`,{
       method:"DELETE"

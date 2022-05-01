@@ -1,4 +1,4 @@
-.card {
+.Card {
     padding: 2%;
     background: rgb(255, 255, 255);
     border-bottom: 2px solid blueviolet;
@@ -13,7 +13,7 @@
        box-shadow;
    }
    
-   .card:hover {
+   .Card:hover {
     border-top: 2px solid blueviolet;
     border-left: 2px solid blueviolet;
     border-bottom: 2px solid rgb(238, 103, 238);
@@ -21,16 +21,16 @@
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
    }
    
-   .card__content {
+   .Card__content {
     font-size: small;
     text-align: center;
    }
    
-   .card__content-heading {
+   .Card__content-heading {
     color: blueviolet;
    }
    
-   .card__content-body p {
+   .Card__content-body p {
     color: rgb(118, 104, 128);
     padding-bottom: 1rem;
    }
