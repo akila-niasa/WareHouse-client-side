@@ -8,6 +8,7 @@ import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 import toast, { Toaster } from 'react-hot-toast';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import axios from 'axios';
 
 const Login = () => {
     const [email, setEmail] = useState('')
@@ -45,13 +46,20 @@ const Login = () => {
         setPassword(event.target.value)
     }
 
-    const handleSubmit = event => {
+    const handleSubmit = async(event) => {
         event.preventDefault()
-        signInWithEmailAndPassword(email, password)
+       await signInWithEmailAndPassword(email, password)
+       const{data}=await axios.post('http://localhost:5000/login',{email})
+       console.log(data);
+       localStorage.setItem('access-token',data)
+
+       navigate(from, { replace: true })
+
     }
 
     if (user) {
-        navigate(from, { replace: true })
+      
+        // navigate(from, { replace: true })
     }
 
     const resetPassword = async () => {
