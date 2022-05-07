@@ -6,13 +6,14 @@ const Blogs = () => {
      <div>
             <div className='border p-3 m-5 rounded shadow'>
             <h2>Difference between javascript and nodejs</h2>
-            <p><span className='fw-bold'>Javascript</span> is a Programming language.It used for any client side coding.It is run inside the browser.</p>
+            <p><span className='fw-bold'>Javascript</span> is a just-in-time compiled programming language.It used for any client side coding.It is run inside the browser.</p>
             <p><span className='fw-bold'>nodejs</span> is a server side coding for javascript.It used for performing any non blocking operation.It runs outsite the browser</p>
         </div>
-        {/* <div  className='border p-3 m-5 rounded shadow'>
+        <div  className='border p-3 m-5 rounded shadow'>
             <h2> When should you use nodejs and when should you use mongodb</h2>
-            <p></p>
-        </div> */}
+            <p> <span className='fw-bold'>Node.js</span>is use for building real-time web applications.We use it get data from server side.</p>
+            <p> <span className='fw-bold'>Mongodb</span> </p>
+        </div>
         <div className='border p-3 m-5 rounded shadow'> <h2>Differences between sql and nosql databases.</h2>
         <p><span className='fw-bold'>SQL</span> is used in Relational Database Management system.It's structuret data can be stored in tables.The Schemas are static.</p>
         <p><span className='fw-bold'>NOSQL</span> is used in Non-Relational,Distributed Database Management system.Using JSON data,Unstructured data can be stored.The Schemas are dynamic.</p>

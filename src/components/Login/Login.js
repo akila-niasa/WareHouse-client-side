@@ -53,13 +53,13 @@ const Login = () => {
        console.log(data.token);
        localStorage.setItem('access-token',data.token)
 
-    //    navigate(from, { replace: true })
+       navigate(from, { replace: true })
 
     }
 
     if (user) {
       
-        navigate(from, { replace: true })
+        // navigate(from, { replace: true })
     }
 
     const resetPassword = async () => {

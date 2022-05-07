@@ -1,6 +1,6 @@
 # Laptop Store
 
- Live Link: [Create React App](https://github.com/facebook/create-react-app).
+ Live Link: [https://warehouse-management-2d317.web.app](https://warehouse-management-2d317.web.app).
 
 
 ## Features
