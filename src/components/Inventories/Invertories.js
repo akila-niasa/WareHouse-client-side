@@ -14,7 +14,7 @@ const Invertories = () => {
     const[rerender,setRerender]=useState(false)
     useEffect(() => {
        
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://secure-sands-04849.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -27,7 +27,7 @@ const Invertories = () => {
         const updatedQuantity=parseInt(product.quantity)-1
         if (updatedQuantity) {
             console.log('in if');
-            fetch(`http://localhost:5000/product/${id}`, {
+            fetch(`https://secure-sands-04849.herokuapp.com/product/${id}`, {
                 method: "PUT",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify({updatedQuantity})
@@ -50,8 +50,8 @@ const Invertories = () => {
         
         if (updatedQuantity) {
            
-            console.log('in if');
-            fetch(`http://localhost:5000/product/${id}`, {
+            // console.log('in if');
+            fetch(`https://secure-sands-04849.herokuapp.com/product/${id}`, {
                 method: "PUT",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(quantityObj)
@@ -80,7 +80,9 @@ const Invertories = () => {
                         <h3>Name: {product.name}</h3>
                         <h5>Supplier : {product.supplier}</h5>
                         <p>Details: {product.details}</p>
-                        <p>Quantity:  {product.quantity}</p>
+                        <p>Price: {product.price}</p>
+                    
+                            <p>Quantity:  {product.quantity}</p>
                     </div>
                 </div>
             </div>

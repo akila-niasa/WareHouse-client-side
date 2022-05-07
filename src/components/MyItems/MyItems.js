@@ -9,15 +9,25 @@ const MyItems = () => {
     const [render, setRender] = useState(false)
     const [items, setItems] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/product?email=${user.email}`)
+        fetch(`https://secure-sands-04849.herokuapp.com/addProduct?email=${user?.email}`
+        ,{
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem("access-token")}`,
+              },
+        }
+        )
             .then(res => res.json())
-            .then(data => setItems(data))
-    }, [user.email, render])
+            .then(data => {
+                console.log(data);
+                setItems(data)
+            }
+            )
+    }, [user?.email, render])
     const handleDelete = id => {
 
         const processed = window.confirm("are you want to delete")
         if (processed) {
-            fetch(`http://localhost:5000/addProduct/${id}`, {
+            fetch(`https://secure-sands-04849.herokuapp.com/addProduct/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())

@@ -49,9 +49,9 @@ const Login = () => {
     const handleSubmit = async(event) => {
         event.preventDefault()
        await signInWithEmailAndPassword(email, password)
-       const{data}=await axios.post('http://localhost:5000/login',{email})
-       console.log(data);
-       localStorage.setItem('access-token',data)
+       const{data}=await axios.post('https://secure-sands-04849.herokuapp.com//login',{email})
+       console.log(data.token);
+       localStorage.setItem('access-token',data.token)
 
        navigate(from, { replace: true })
 
@@ -65,7 +65,7 @@ const Login = () => {
     const resetPassword = async () => {
         if (email) {
             await sendPasswordResetEmail(email);
-            toast.error('Sent email');
+            toast.success('Sent email');
         }
         else {
             toast.error('Please enter your email');

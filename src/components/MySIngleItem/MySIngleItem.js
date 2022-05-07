@@ -4,7 +4,7 @@ import { Button, Card } from 'react-bootstrap';
 import './MySingleItem.css'
 
 const MySIngleItem = ({item,handleDelete}) => {
-    const { name, supplier, quantity, image, details, _id } = item
+    const { name, supplier, quantity,price, image, details, _id } = item
    
     return (
         <div className='row'>
@@ -17,6 +17,7 @@ const MySIngleItem = ({item,handleDelete}) => {
                         <h5>Supplier:{supplier}</h5>
                         <p>Details: {details}</p>
                         <p>Quantity: {quantity}</p>
+                        <p>Price: {price}</p>
                         <Button onClick={()=>handleDelete(_id)} className='deletButton ms-1' >Delete</Button>
                     </div>
                 </div>

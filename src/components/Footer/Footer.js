@@ -8,7 +8,7 @@ const Footer = () => {
             <footer className='footer container-fluid  w-100 py-8 mt-8'>
         <div className="row">
         <div className='text-center col-lg-4 text-light  p-10 mt-3  mb-4'>
-         <h3> Contract</h3>
+         <h3> Laptop Store</h3>
           <p>Location: 500/4 Dhanmondi Road,Dhaka</p>
   
            <p> Mail: ino@gmail.com</p>

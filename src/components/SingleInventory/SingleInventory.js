@@ -4,7 +4,7 @@ import { Button, Card } from 'react-bootstrap';
 import './SingleInventory.css'
 
 const SingleInventory = ({ product,handleDelete }) => {
-    const { name, supplier, quantity, image, details, _id } = product
+    const { name, supplier, quantity,price, image, details, _id } = product
 
     return (
         <div className='col-lg-4 col-md-6 g-2'>
@@ -17,6 +17,10 @@ const SingleInventory = ({ product,handleDelete }) => {
                     </Card.Text>
                     <Card.Text>
                        <span className='fw-bold'> Details</span>: {details}
+                    </Card.Text>
+                    <Card.Text>
+                       <span className='fw-bold'>
+                       Price</span>: $ {price}
                     </Card.Text>
                     <Card.Text>
                        <span className='fw-bold'>

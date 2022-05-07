@@ -3,7 +3,7 @@
      
       "name": "Dell Laptop",
       "supplier": "Md Mahbubur Rahman",
-     
+     "price":12000,
       "quantity": 1,
       "image": "https://i.ibb.co/TvnZCBR/dell-laptop-500x500-intel-cor.jpg",
       "details": "Dell’s work, particularly in the ultrabook field, has yielded an incredible new crop of ultraportable laptops that are powerful and have excellent battery life. If you need a PC for work or school and want it to last for as long as possible, Dell’s machines are a great choice. And Dell has arguably one of the best business laptops in its Latitude 7400 2-in-1, which offers a solid design and multi-day battery life."
@@ -11,7 +11,7 @@
     {
       "name": "HP Laptop",
       "supplier": "Md Mahbubur Rahman",
-     
+      "price":11000,
       "quantity": 10,
       "image": "https://i.ibb.co/PCcWxqP/download-2-hp-windows10.jpg",
       "details": "HP may not have always had the best laptop reputation, but the latest laptops from HP have taken some design cues from its contemporaries and have really raised the bar. Its current notebooks are fast, powerful, and easier for consumers to adopt for their personal projects. They’re also quite lovely, with the new gem-cut design adorning the Spectre line and a sleek, modern look to the latest Envy 15. Through it all, HP has earned a reputation for reliable laptops with very competent customer service."
@@ -19,7 +19,7 @@
     {
       "name": "Apple Laptop",
       "supplier": "Md Mahbubur Rahman",
-     
+      "price":13000,
       "quantity": 1,
       "image": "https://i.ibb.co/4ZJtdSN/download-2-apple.jpg",
       "details": "If there’s one thing that nearly everyone agrees on, it’s that Apple laptops are reliable and predictably high-quality, and they last a long time with updates that support older laptops long past when other brands have bit the dust. When you buy a MacBook, you know what to expect. You’ll get a fantastic screen, solid battery life, and a beautiful chassis with thin bezels. They do tend to be more expensive than their Windows counterparts, but when it comes to style, ease of use, and reliability, Apple laptops are top-notch."
@@ -27,7 +27,7 @@
     {
       "name": "Lenovo Laptop",
       "supplier": "Md Mahbubur Rahman",
-     
+      "price":13000,
       "quantity": 1,
       "image": "https://i.ibb.co/hLxs6Nk/download-2-lenevo.jpg",
       "details": "Lenovo is a brand that we have long associated with reliability, as its long-lived line of workhorse ThinkPad/IdeaPad computers have shown up in offices and classrooms year after year. They may not always look like much, but they’re durable and more than ready to get the job done. It’s something that the brand has become increasingly skilled at."
@@ -35,7 +35,7 @@
     {
       "name": "Acer Laptop",
       "supplier": "Md Mahbubur Rahman",
-     
+      "price":10000,
       "quantity": 1,
       "image": "https://i.ibb.co/H2r62TD/download-2-acer.jpg",
       "details": "You’ll find Acer laptops and accessories frequently show up on our recommendations for affordable or budget computing. And while the brand does have a respectable reputation for producing competent budget models like the Acer Aspire 5, Acer also has other specializations that help it stand out in the right situations."
@@ -43,7 +43,7 @@
     {
       "name": "Asus Laptop",
       "supplier": "Md Mahbubur Rahman",
-     
+      "price":14000,
       "quantity": 1,
       "image": "https://i.ibb.co/zrSHgnK/download-2-asos.jpg",
       "details": "Asus laptops might not often take the top spot in our best-of lists, but they usually warrant a medal placing due to their fantastic all-around capabilities. The current crop of its laptops includes thin and light Zenbooks, affordable Chromebooks, and powerful gaming machines like the incredible 2020 ROG Zephyrus G14. And as much as anyone, Asus is leading the movement to tiny bezels that pack as much laptop as possible into the smallest chassis. "
@@ -51,7 +51,7 @@
     {
       "name": "MSI Laptop",
       "supplier": "Md Mahbubur Rahman",
-     
+      "price":12000,
       "quantity": 1,
       "image": "https://i.ibb.co/RS31DXB/download-2-msi.jpg",
       "details": "Start looking for gaming laptops, and it won’t be too long before you’re looking at some of MSI’s creations. MSI has a reputation for producing extra-solid gaming machines without the flair and RGB add-ons. They’re no-nonsense laptops that get you playing fast and can put in a solid day’s work when needed."
@@ -59,7 +59,7 @@
     {
       "name": " Microsoft Surface Laptop",
       "supplier": "Md Mahbubur Rahman",
-     
+      "price":11000,
       "quantity": 1,
       "image": "https://i.ibb.co/D9C07TT/download-2-microsoft.jpg",
       "details": "A decade ago, no one would have thought that Microsoft would be one of the best laptop brands in the world, but today, it has a well-earned spot on this list. After a few iterations of Surface tablets with some reliability issues on its new Surface devices and offers hardware that is often class-leading in its own way."
@@ -67,7 +67,7 @@
     {
       "name": " Razer Laptop",
       "supplier": "Md Mahbubur Rahman",
-     
+      "price":13000,
       "quantity": 1,
       "image": "https://i.ibb.co/YXWYQMW/images-4-raze.jpg",
       "details": "SRazer is well-known for its flashy gaming accessories, but the brand also offers a powerful line of gaming laptops designed to take even demanding games on the go or support a more versatile virtual reality (VR) experience that doesn’t chain you to a desktop space. Razer laptops are built well and they last forever — at least until they’re no longer able to run the latest title at acceptable frame rates."

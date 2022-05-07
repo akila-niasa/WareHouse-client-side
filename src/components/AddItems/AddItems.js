@@ -14,12 +14,13 @@ const AddItems = () => {
             name: event.target.name.value,
             supplier: event.target.name.value,
             quantity: event.target.quantity.value,
+            price: event.target.price.value,
             image: event.target.image.value,
             details: event.target.details.value,
             email:user.email
         };
         if (product) {
-            fetch('http://localhost:5000/product', {
+            fetch('https://secure-sands-04849.herokuapp.com/product', {
                 method: 'POST', // or 'PUT'
                 headers: {
                     'Content-Type': 'application/json',
@@ -46,6 +47,9 @@ const AddItems = () => {
                         </label>
                         <label>
                             <span>Quantity</span><input type="text" name="quantity"  />
+                        </label>
+                        <label>
+                            <span>Price</span><input type="text" name="price"  />
                         </label>
                         <label >
                             <span>Image</span><input type="text"

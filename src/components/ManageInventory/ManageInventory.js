@@ -9,7 +9,7 @@ const ManageInventory = () => {
     // const [products, setProducts] = useInventories()
     const[products,setProducts]=useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/product`)
+        fetch(`https://secure-sands-04849.herokuapp.com/product`)
         .then(res=>res.json())
         .then(data=>setProducts(data))
     },[])
@@ -17,7 +17,7 @@ const ManageInventory = () => {
     const handleDelete=id=>{
         const proccessed=window.confirm("are you sure about that?")
   if(proccessed){
-    fetch(`http://localhost:5000/product/${id}`,{
+    fetch(`https://secure-sands-04849.herokuapp.com/product/${id}`,{
       method:"DELETE"
     })
     .then(res=>res.json())
