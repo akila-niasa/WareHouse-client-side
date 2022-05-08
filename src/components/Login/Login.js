@@ -49,17 +49,17 @@ const Login = () => {
     const handleSubmit = async(event) => {
         event.preventDefault()
        await signInWithEmailAndPassword(email, password)
-       const{data}=await axios.post('https://secure-sands-04849.herokuapp.com//login',{email})
+       const{data}=await axios.post('https://secure-sands-04849.herokuapp.com/login',{email})
        console.log(data.token);
        localStorage.setItem('access-token',data.token)
 
-    //    navigate(from, { replace: true })
+       navigate(from, { replace: true })
 
     }
 
     if (user) {
       
-        navigate(from, { replace: true })
+        // navigate(from, { replace: true })
     }
 
     const resetPassword = async () => {
