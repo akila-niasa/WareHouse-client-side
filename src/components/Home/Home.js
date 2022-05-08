@@ -4,6 +4,7 @@ import useInventories from '../../hooks/useInventories';
 import Banner from '../Banner/Banner';
 import ContractUs from '../ContractUs/ContractUs';
 import Footer from '../Footer/Footer';
+import Loading from '../Loading/Loading';
 import Products from '../Products/Products';
 import SupplierFeedback from '../SupplierFeedback/SupplierFeedback';
 import './Home.css'
@@ -16,6 +17,9 @@ const Home = () => {
     //     .then(res=>res.json())
     //     .then(data=>setProducts(data))
     // },[])
+    if (products.length === 0) {
+        return <Loading></Loading>;
+      }
     return (
         <div>
             <Banner />
