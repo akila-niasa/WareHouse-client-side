@@ -11,8 +11,8 @@ const Blogs = () => {
         </div>
         <div  className='border p-3 m-5 rounded shadow'>
             <h2> When should you use nodejs and when should you use mongodb</h2>
-            <p> <span className='fw-bold'>Node.js</span>is use for building real-time web applications.We use it get data from server side.</p>
-            <p> <span className='fw-bold'>Mongodb</span> </p>
+            <p> <span className='fw-bold'>Node.js</span>is use for building real-time web applications.We use it get data from server side.It gives us the advantages of asynchronous non-blocking code.</p>
+            <p> <span className='fw-bold'>Mongodb</span> stores data records in json.Best advantage of MongoDB is i can  store a collection inside another collection.</p>
         </div>
         <div className='border p-3 m-5 rounded shadow'> <h2>Differences between sql and nosql databases.</h2>
         <p><span className='fw-bold'>SQL</span> is used in Relational Database Management system.It's structuret data can be stored in tables.The Schemas are static.</p>
