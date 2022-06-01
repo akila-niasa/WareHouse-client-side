@@ -8,10 +8,11 @@ import './Inventories.css'
 const Invertories = () => {
     const { id } = useParams()
     const [product, setProduct] = useState({})
+    const [stock,setStock]=useState(0)
     // const [rerender, setRerender] = useState(false)
     // const [loading, setLoading] = useState(false);
     // const[quantity,setquantity]=useState(0)
-    const[rerender,setRerender]=useState(false)
+    // const[rerender,setRerender]=useState(false)
     useEffect(() => {
        
         fetch(`https://secure-sands-04849.herokuapp.com/product/${id}`)
@@ -19,12 +20,14 @@ const Invertories = () => {
             .then(data => {
                 // console.log(data);
                 setProduct(data)
+                setStock(data.quantity)
             })
-    }, [id,rerender])
+    }, [id])
     // console.log(product);
 
     const handledeliver=()=>{
-        const updatedQuantity=parseInt(product.quantity)-1
+        const updatedQuantity=parseInt(stock)-1
+        setStock(updatedQuantity)
         if (updatedQuantity) {
             console.log('in if');
             fetch(`https://secure-sands-04849.herokuapp.com/product/${id}`, {
@@ -37,17 +40,17 @@ const Invertories = () => {
                     console.log(data);
                 })
                 
-               setRerender(!rerender)
+            //    setRerender(!rerender)
         }
     }
 
     const handleUpdate = event => {
         event.preventDefault()
    
-        const updatedQuantity = parseInt(event.target.quantity.value) + parseInt(product.quantity)
+        const updatedQuantity = parseInt(event.target.quantity.value) + parseInt(stock)
         const quantityObj = { updatedQuantity }
         // console.log(quantity);
-        
+        setStock(updatedQuantity)
         if (updatedQuantity) {
            
             // console.log('in if');
@@ -62,7 +65,7 @@ const Invertories = () => {
                    
                    
                 })
-                setRerender(!rerender);
+                // setRerender(!rerender);
                 console.log('render is successfull');
                 event.target.reset()
                
@@ -82,7 +85,7 @@ const Invertories = () => {
                         <p>Details: {product.details}</p>
                         <p>Price: {product.price}</p>
                     
-                            <p>Quantity:  {product.quantity}</p>
+                            <p>Quantity:  {stock}</p>
                     </div>
                 </div>
             </div>
